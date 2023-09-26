@@ -1,22 +1,31 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '964e4adcc5fc3e9365acd2fc04774540e5509bd6',
         'name' => 'admin/projeto-back-end-web-services',
         'dev' => true,
     ),
     'versions' => array(
         'admin/projeto-back-end-web-services' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '964e4adcc5fc3e9365acd2fc04774540e5509bd6',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-diactoros' => array(
+            'pretty_version' => '3.2.0',
+            'version' => '3.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-diactoros',
+            'aliases' => array(),
+            'reference' => 'aca73646e658dce3f079f6b8648c651e193e331e',
             'dev_requirement' => false,
         ),
         'monolog/monolog' => array(
@@ -55,6 +64,12 @@
             'reference' => 'e616d01114759c4c489f93b099585439f795fe35',
             'dev_requirement' => false,
         ),
+        'psr/http-factory-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '^1.1 || ^2.0',
+            ),
+        ),
         'psr/http-message' => array(
             'pretty_version' => '1.1',
             'version' => '1.1.0.0',
@@ -63,6 +78,12 @@
             'aliases' => array(),
             'reference' => 'cb6ce4845ce34a8ad9e68117c10ee90a29919eba',
             'dev_requirement' => false,
+        ),
+        'psr/http-message-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '^1.1 || ^2.0',
+            ),
         ),
         'psr/http-server-handler' => array(
             'pretty_version' => '1.0.2',
@@ -96,6 +117,15 @@
             'provided' => array(
                 0 => '3.0.0',
             ),
+        ),
+        'selective/basepath' => array(
+            'pretty_version' => '2.2.0',
+            'version' => '2.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../selective/basepath',
+            'aliases' => array(),
+            'reference' => 'c332fc762505ddca9790965de084b787310fc051',
+            'dev_requirement' => false,
         ),
         'slim/slim' => array(
             'pretty_version' => '4.12.0',

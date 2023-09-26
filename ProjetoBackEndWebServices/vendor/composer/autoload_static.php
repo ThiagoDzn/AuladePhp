@@ -4,9 +4,16 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit15c73192abc5d6c448259c7091308197
+class ComposerStaticInit1c63a2030be8698fcbc58c218be940a1
 {
     public static $files = array (
+        '07d7f1a47144818725fd8d91a907ac57' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/create_uploaded_file.php',
+        'da94ac5d3ca7d2dbab84ce561ce72bfd' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_headers_from_sapi.php',
+        '3d97c8dcdfba8cb85d3b34f116bb248b' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_method_from_sapi.php',
+        'e6f3bc6883e449ab367280b34158c05b' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_protocol_version_from_sapi.php',
+        'de95e0ac670b27c84ef8c5ac41fc1b34' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_server.php',
+        'b6c2870932b0250c10334a86dcb33c7f' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.php',
+        'd02cf21124526632320d6f20b1bbf905' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
     );
 
@@ -14,6 +21,7 @@ class ComposerStaticInit15c73192abc5d6c448259c7091308197
         'S' => 
         array (
             'Slim\\' => 5,
+            'Selective\\BasePath\\' => 19,
         ),
         'P' => 
         array (
@@ -25,6 +33,10 @@ class ComposerStaticInit15c73192abc5d6c448259c7091308197
         'M' => 
         array (
             'Monolog\\' => 8,
+        ),
+        'L' => 
+        array (
+            'Laminas\\Diactoros\\' => 18,
         ),
         'F' => 
         array (
@@ -40,6 +52,10 @@ class ComposerStaticInit15c73192abc5d6c448259c7091308197
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
+        ),
+        'Selective\\BasePath\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/selective/basepath/src',
         ),
         'Psr\\Log\\' => 
         array (
@@ -63,6 +79,10 @@ class ComposerStaticInit15c73192abc5d6c448259c7091308197
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Laminas\\Diactoros\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-diactoros/src',
+        ),
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
@@ -80,9 +100,9 @@ class ComposerStaticInit15c73192abc5d6c448259c7091308197
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit15c73192abc5d6c448259c7091308197::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit15c73192abc5d6c448259c7091308197::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit15c73192abc5d6c448259c7091308197::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1c63a2030be8698fcbc58c218be940a1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1c63a2030be8698fcbc58c218be940a1::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit1c63a2030be8698fcbc58c218be940a1::$classMap;
 
         }, null, ClassLoader::class);
     }

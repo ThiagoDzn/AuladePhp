@@ -1,12 +1,35 @@
 <?php
-use App\SystemServices\MonologFactory;
-
 include_once __DIR__ .  "/../vendor/autoload.php";
 
+use App\SystemServices\MonologFactory;
 
-$logger = MonologFactory::getInstance();
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Slim\Factory\AppFactory;
+use Selective\BasePath\BasePathMiddLeware;
 
-$logger->debug("Arquivo main.php rodando...");
-$logger->info("Apenas uma informação");
-$logger->error("se o app dar erro aparece isso");
+MonoLogFactory::getInstance()->debug("main executando...");
+
+$app = AppFactory::create();
+
+$app->addRoutingMiddleware();
+$app->add(new BasePathMiddleware($app));
+$app->addErrorMiddleware(true, true, true);
+
+$app->get('/', function (Request $request, Response $reponse) {
+  $reponse->getBody()->write('Hello World!');
+  return $reponse;
+});
+
+$app->get('inserirusuario', function (Request $request, Response $response) {
+   $response->getBody()->write('Hello World!');
+   return $response;
+});
+
+$app->run();
+
+
+
+
+
 ?>
